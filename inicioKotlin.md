@@ -124,3 +124,65 @@ enum class GenerosCine {
 println(GenerosCine.CienciaFiccion)
 
 ```
+
+## Condicionales
+
+Toma de caminos, verdadero o falso, sin grandes diferencias:
+
+```kt
+if (a > b) {
+        return a
+    }
+else {
+        return b
+    }
+```
+
+## Estructura SWITCH
+
+Esta estructura no solo examina a una variable para casos concretos, como en C#, si no que además puede realizar evaluaciones *booleanas*, incluso comprobar rangos. Vamos a dar ejemplo con una función que recibe una variable de tipo `Any` para devolver con un `string` la descripción de la variable.
+
+```kt
+fun identificar(elemento: Any): String =
+when (elemento) {
+    1          -> "Número 1"
+    2, 3       -> "Número 2 o quizás 3"
+    4..10      -> "Número entre el 4 y el 10"
+    "Hola"     -> "¡Un saludo!"
+    is Long    -> "Es un número Long"
+    !is String -> "Este elemento no es un string"
+    else       -> "Elemento desconocido, ¡destruir!"
+}
+```
+
+## Bucle WHILE
+
+El bucle `WHILE`, el clásico entre los clásicos:
+
+```kt
+while (true) {
+    println("¡Otra línea en un bucle infinito!")
+
+}
+```
+
+## Bucle FOR
+
+Un bucle para viajar entre rangos de elementos:
+
+```kt
+for (num in 1..5) {
+    println(num)
+}
+```
+
+## Bucle FOREACH
+
+Un bucle para examinar a todos los items en una colección...
+
+```kt
+for (item in lista) {
+    println(item)
+}
+```
+
