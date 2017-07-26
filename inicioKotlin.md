@@ -105,11 +105,37 @@ println(enviarSaludo("Elena"))
 La declaración de Clases se simplifica de tal modo que en el mismo nombramiento se define el constructor y los parámetros que va a utiizar.
 
 ```kt
-class Persona (val id: String, val nombre: String)
+class Persona (id: String, nombre: String)
 val nuevaPersona = Persona("001", "Elena G")
 
 println(nuevaPersona.nombre)
 
+```
+
+En el constructor, uno de los argumentos podría ser, como por ejemplo para el caso de un identificador único e inamovible, una variable de tiplo `val`:
+
+```kt
+class Persona (val id: String, nombre: String)
+```
+
+Declaración de Propiedades en Clases:
+
+```kt
+class Persona (val id: String, nombre: String, edad: Int) {
+    val esMayorDeEdad: Boolean
+        get() {
+            return if (edad >= 18) true else false
+        }
+}
+```
+
+Una Propiedad `boolean` que, como tal, puede recibir una forma simplificada:
+
+```kt
+class Persona (val id: String, nombre: String, edad: Int) {
+    val esMayorDeEdad: Boolean
+        get() = if (edad >= 18) true else false
+}
 ```
 
 ## Enumeraciones
