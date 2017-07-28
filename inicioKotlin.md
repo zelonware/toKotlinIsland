@@ -148,7 +148,22 @@ enum class GenerosCine {
 }
 
 println(GenerosCine.CienciaFiccion)
+```
 
+Las enumeraciones pueden tener también Propiedades a las que hacer referencia. Como por ejemplo, no solo su constante si no también un valor asociado. Podemos incluso crear funciones en ella para operar ya sea con el valor de la enumeración elegido o bien con la Propiedad que estamos añadiendo.
+
+Para añadir estas novedades, veremos uno de los excepcionales casos en los que podemos usar el caracter `;`, para determinar más código en la enumeración que la declaración de sus constantes:
+
+```kt
+enum class GenerosCine(val nombreGenero: String) {
+    CienciaFiccion("Ciencia ficción"), Fantasia("Fantasía"), Accion("Acción"), Terror("Terror");
+    
+    fun descripcion() = "Una película de $nombreGenero"
+}
+
+println(GenerosCine.Accion)
+println(GenerosCine.Fantasia.nombreGenero)
+println(GenerosCine.CienciaFiccion.descripcion())
 ```
 
 ## Condicionales
