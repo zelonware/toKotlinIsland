@@ -27,6 +27,7 @@ Puede tener una anotación, opcionalmente, como `@FunctionalInterface`.
 
 * Consumidores
 * Proveedores
+* Funciones
 * Predicados
 
 ### Consumidores
@@ -35,7 +36,7 @@ Reciben un solo parámetro y no devuelven valor. Consumen un solo valor pero sin
 
 ### Proveedores
 
-No reciben parámetros y devuelven resulados, devuelven valores. No consumen, solo proveen de resultados.
+No reciben parámetros y devuelven resultados, devuelven valores. No consumen, solo proveen de resultados.
 
 ### Funciones
 
