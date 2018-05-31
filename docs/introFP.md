@@ -137,6 +137,9 @@ Perseguimos la reutilización del código, optimizando su uso. Porque si escribe
 
 Buscaremos el equilibrio, creando piezas pequeñas y reutilizables que se pueden utilizar como piezas de Lego en nuestros proyectos.
 
+### Programación reactiva, _reactive programming_
+
+Si quieres saber más, visita [RxMarbles](http://rxmarbles.com/)
 
 #### Referencias
 
